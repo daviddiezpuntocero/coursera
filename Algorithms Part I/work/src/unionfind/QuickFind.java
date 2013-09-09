@@ -10,6 +10,10 @@ public class QuickFind {
         }
     }
 
+    public int[] getId() {
+        return id;
+    }
+
     public boolean connected(int p, int q) {
         return id[p] == id[q];
     }
