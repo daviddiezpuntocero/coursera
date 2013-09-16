@@ -1,5 +1,3 @@
-package unionfind;
-
 public class WeightedUnionFind {
     private int[] id;
 
