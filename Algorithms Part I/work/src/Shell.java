@@ -8,12 +8,18 @@ public class Shell {
         }
         
         while (h >= 1) {
+            System.out.println("h is : " + h);
             for (int i = h; i < N; i++) {
                 for (int j = i; j >= h && less(a[j], a[j - h]) ; j -= h) {
                         exch(a, j, j - h);
+                        System.out.println();
+                        for (int k = 0; k < N; k++) {
+                            System.out.print(a[k] + " ");
+                        }
                     }
              }
             h = h/3;
+            System.out.println();
         }
     }
 

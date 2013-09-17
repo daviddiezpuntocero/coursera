@@ -54,5 +54,10 @@ public class Stack<Item> implements Iterable<Item> {
         first = first.next;
         return item;
     }
-    
+
+    public Item peek() 
+    {
+        return first.item;
+    }
+        
 }

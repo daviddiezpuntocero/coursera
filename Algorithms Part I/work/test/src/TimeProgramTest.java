@@ -8,5 +8,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 public class TimeProgramTest {
+
+    @Test
+    public void dummyTest()
+    {
+    }
     
 }
