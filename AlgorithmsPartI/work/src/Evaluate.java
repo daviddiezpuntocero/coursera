@@ -1,11 +1,11 @@
 public class Evaluate {
     public static void main(String[] args) {
         Stack<String> ops = new Stack<String>();
-        Stack<Double> vals = new Stack<Double>();
+        Stack<Double> vals = new Stack<Double>(); 
         while (!StdIn.isEmpty()) {
             String s = StdIn.readString();
-            if (s.equals("(")) {
-                ;
+            if (s.equals("(")) { 
+               ;
             } else if (s.equals("+")) {
                 ops.push(s);
             } else if (s.equals("*")) {
@@ -24,3 +24,4 @@ public class Evaluate {
         StdOut.println(vals.pop());
     }
 }
+
