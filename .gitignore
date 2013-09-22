@@ -5,3 +5,8 @@
 *.war
 *.ear
 target
+.cache
+.idea
+.settings
+.project
+.classpath
