@@ -350,6 +350,7 @@
         <java classname="${c}">
             <classpath>
                 <pathelement path = "${build.production.classes}"/>
+                <pathelement path = "${common.classpath}"/>
             </classpath>
         </java>
     </target>
