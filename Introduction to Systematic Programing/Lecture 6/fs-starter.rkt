@@ -25,14 +25,18 @@
 (define D5 (make-elt "D5" 0 (list F3)))
 (define D6 (make-elt "D6" 0 (list D4 D5)))
 
-
-
+(define (fn-for-element e)
+  (... (elt-name e)
+       (elt-data e)
+       (fn-for-loe (elt-subs e))))
 
 ;; Functions:
 
-
-
-
+(define (fn-for-loe loe)
+  (cond [(empty? loe) (...)]
+        [else 
+         (... (fn-for-element (first loe))
+              (fn-for-loe (rest loe)))]))
 
 ;; Functions:
 

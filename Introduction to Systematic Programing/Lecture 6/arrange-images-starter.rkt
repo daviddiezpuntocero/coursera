@@ -50,12 +50,12 @@
 1 0 10 #"text-box%\0"
 1 0 32 #"(lib \"text-snipclass.ss\" \"xml\")\0"
 1 0 1 6 #"wxloc\0"
-          0 0 664 0 1 #"\0"
+          0 0 665 0 1 #"\0"
 0 75 1 #"\0"
 0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
 #"Standard\0"
-0 75 7 #"Monaco\0"
-0 14 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
+0 75 12 #"Inconsolata\0"
+0 18 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
 #"\0"
 0 -1 1 #"\0"
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
@@ -2040,7 +2040,10 @@
 0 0 -1 -1 2 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 3 -1 0 0 0 0 0 0 0.0 0.0 0.0 0.0 0.0 0.0 255 165 0 0 0
-0 -1 -1           0 1140 0 4 3 85
+0 -1 -1 0 1 #"\0"
+0 75 10 #"Monospace\0"
+0.0 22 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
+255 255 1 -1           0 1140 0 4 3 85
 (
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -2050,11 +2053,11 @@
  #";; about the language level of this file in a form that our tools ca"
  #"n easily process."
 ) 0 0 4 29 1 #"\n"
-0 0 4 3 189
+0 0 4 3 194
 (
- #"#reader(lib \"htdp-beginner-reader.ss\" \"lang\")((modname arrange-i"
- #"mages-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settin"
- #"gs #(#t constructor repeating-decimal #f #t none #f ())))"
+ #"#reader(lib \"htdp-beginner-abbr-reader.ss\" \"lang\")((modname arra"
+ #"nge-images-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-s"
+ #"ettings #(#t constructor repeating-decimal #f #t none #f ())))"
 ) 0 0 4 29 1 #"\n"
 0 0 23 3 1 #"("
 0 0 14 3 7 #"require"
