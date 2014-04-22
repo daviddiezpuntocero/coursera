@@ -149,6 +149,7 @@ def applyShift(text, shift):
     ### TODO.
     ### HINT: This is a wrapper function.
     assert(0 <= shift < 26)
+
     return applyCoder(text, buildCoder(shift))
 
 #
@@ -184,7 +185,7 @@ def decryptStory():
     raw data you need.
 
     returns: string - story in plain text
-    """
+     """
     ### TODO.
     story = getStoryString()
     bestShift = findBestShift(loadWords(), story)
@@ -202,3 +203,4 @@ if __name__ == '__main__':
     assert applyShift(s, bestShift) == 'Hello, world!'
     # To test decryptStory, comment the above four lines and uncomment this line:
     #    decryptStory()
+

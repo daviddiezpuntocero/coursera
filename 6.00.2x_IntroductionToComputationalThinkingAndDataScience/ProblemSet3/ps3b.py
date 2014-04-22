@@ -349,7 +349,7 @@ class TreatedPatient(Patient):
 
         postcondition: The list of drugs being administered to a patient is updated
         """
-        self.drugs.append(newDrug)
+        self.drugs = self.drugs | set([newDrug])
 
     def getPrescriptions(self):
         """
@@ -439,7 +439,7 @@ def simulationWithDrug(numViruses, maxPop, maxBirthProb, clearProb, resistances,
              (a float between 0-1).
     numTrials: number of simulation runs to execute (an integer)
     """
-    timestep = 300
+    timestep = 1
     population = []
     for i in range(timestep):
         population.insert(i, 0)
@@ -463,11 +463,12 @@ def simulationWithDrug(numViruses, maxPop, maxBirthProb, clearProb, resistances,
 
         patient.addPrescription("guttagonol")
 
-        for t in range(timestep/2, timestep):
-            population[t] += float(patient.update())
-            rsp[t] += float(patient.getResistPop(["guttagonol"]))
+        if (timestep > 1):
+            for t in range(timestep/2, timestep):
+                population[t] += float(patient.update())
+                rsp[t] += float(patient.getResistPop(["guttagonol"]))
 
-    for i in range(300):
+    for i in range(timestep):
         population[i] = population[i]/numTrials
         rsp[i] = rsp[i]/numTrials
 
@@ -479,3 +480,5 @@ def simulationWithDrug(numViruses, maxPop, maxBirthProb, clearProb, resistances,
     pylab.ylabel("# viruses")
     pylab.legend(('Population', 'Time'))
     pylab.show()
+
+simulationWithDrug(100,1000,0.1,0.05,{'guttagonol': False},0.005,100)
